@@ -29,18 +29,11 @@ mv * /www/wwwroot/$domainName/webmail
 cd /www/wwwroot/$domainName/webmail
 rm -rf rainloop-latest.zip
 echo "* [Fixing Permissions]"
-chmod -R 0666 data
-cd data
-chmod -R 0777 *
-cd ..
-chmod -R 0644 rainloop
-cd rainloop
-chmod -R 777 *
-cd ..
-cd rainloop/v
-chmod -R 777 *
-cd ..
-chmod -R 0666 index.php
+chmod -R 755 /www/wwwroot/$domainName/webmail
+chmod -R 777 data
+chmod -R 777 rainloop
+chmod -R 666 data/EMPTY
+chmod -R 644 data/INSTALLED
 echo 
 echo "✓ [Fixed Permissions]
 echo 

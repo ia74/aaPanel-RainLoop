@@ -7,21 +7,22 @@ cd /home/
 rm -rf installers
 mkdir installers
 cd installers
-echo I will now install wget.
+echo "* [Installing dependencies..]"
 echo 
-yum install wget
-wget https://www.rainloop.net/repository/webmail/rainloop-latest.zip
+yum -qq install wget
+wget -qq https://www.rainloop.net/repository/webmail/rainloop-latest.zip
 echo 
-echo "* [This installer is for aaPanel (BT-PANEL)]"
+echo "* [Thanks for using my aaPanel Rainloop installer!]"
 echo 
 read -p "* [Enter your domain name (Example: domain.tld)] " domainName
-echo 
-read -p "* [Removing other webmails] Are you sure? Press Control + C to not." input
+read -p "* [Removing other webmails] Are you sure? Press Control + C to not delete others. Press enter to continue." input
+echo
 cd /www/wwwroot/$domainName
 rm -rf webmail
 rm -rf mail
 echo 
 echo "✓ [Removed other webmail]"
+echo 
 mkdir webmail
 cd /home/installers
 unzip -qq rainloop-latest.zip

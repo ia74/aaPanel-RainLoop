@@ -41,6 +41,7 @@ echo
 echo "✓ [Fixed Permissions]"
 echo 
 cd /www/wwwroot/$domainName/webmail/data
+echo "Deny from all" >> .htaccess
 echo "* [Finishing up]"
 echo 
 echo "✓ [Finished!]"

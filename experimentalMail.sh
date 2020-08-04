@@ -9,7 +9,7 @@ mkdir installers
 cd installers
 echo "* [Installing dependencies..]"
 echo 
-yum -qq install wget
+yum -q install wget
 wget -qq https://www.rainloop.net/repository/webmail/rainloop-latest.zip
 echo 
 echo "* [Thanks for using my aaPanel Rainloop installer!]"

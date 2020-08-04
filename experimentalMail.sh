@@ -15,7 +15,8 @@ echo
 echo "* [Thanks for using my aaPanel Rainloop installer!]"
 echo 
 read -p "* [Enter your domain name (Example: domain.tld)] " domainName
-read -p "* [Removing other webmails] Are you sure? Press Control + C to not delete others. Press enter to continue." input
+echo 
+read -p "* [Removing Other Webmails.] Are you sure? Press ENTER to continue. To CANCEL, press CONTROL + C." input
 echo
 cd /www/wwwroot/$domainName
 rm -rf webmail

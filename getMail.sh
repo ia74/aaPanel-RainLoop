@@ -9,8 +9,8 @@ mkdir installers
 cd installers
 echo I will now install wget.
 echo 
-yum -q install wget
-wget --quiet https://www.rainloop.net/repository/webmail/rainloop-latest.zip
+yum install wget
+wget https://www.rainloop.net/repository/webmail/rainloop-latest.zip
 echo 
 echo "This installer is for aaPanel, or BT-Panel."
 echo 
@@ -26,6 +26,8 @@ unzip -qq rainloop-latest.zip
 mv * /www/wwwroot/$domainName/webmail
 cd /www/wwwroot/$domainName/webmail
 rm -rf rainloop-latest.zip
+cd /www/wwwroot/$domainName/webmail/data
+echo "Deny from all" >> .htaccess
 echo 
 echo Congratulations. RainLoop is installed on $domainName!
 echo Finish installation at: aaPanel, http://$domainName/webmail, and http://$domainName/webmail/?admin

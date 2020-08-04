@@ -34,6 +34,8 @@ chmod -R 777 data
 chmod -R 777 rainloop
 chmod -R 666 data/EMPTY
 chmod -R 644 data/INSTALLED
+chmod -R 777 rainloop/*
+chmod -R 666 index.php
 echo 
 echo "✓ [Fixed Permissions]
 echo 

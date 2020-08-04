@@ -3,6 +3,9 @@ if [ "$EUID" -ne 0 ]
   then echo "X [Not Root!]"
   exit
 fi
+rm -rf experimentalMail.sh.*
+echo "*[If this doesnt work, make sure there aren't any duplicates of the file!]"
+echo 
 cd /home/
 rm -rf installers
 mkdir installers
@@ -10,6 +13,7 @@ cd installers
 echo "* [Installing dependencies..]"
 yum -q install nano
 yum -q update
+wget -qq https://www.rainloop.net/repository/webmail/rainloop-latest.zip
 echo 
 echo "✓ [Installed dependencies!]"
 echo 

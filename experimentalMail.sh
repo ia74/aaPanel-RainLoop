@@ -20,7 +20,7 @@ while true; do
     read -p "*! [This will remove domains "mail" and "webmail" if they exist. Press Y to delete, N to cancel." yn
     case $yn in
         [Yy]* ) echo "* [Installing]"; break;;
-        [Nn]* ) echo "* [Sorry! Installation could not be complete due to: USER_EXIT]" exit;;
+        [Nn]* ) echo "* [Sorry! Installation could not be complete due to: USER_EXIT]"; exit;;
         * ) echo "Please answer yes or no.";;
     esac
 done

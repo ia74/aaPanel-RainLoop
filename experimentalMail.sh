@@ -1,6 +1,6 @@
 #!/bin/sh
 if [ "$EUID" -ne 0 ]
-  then echo "Please run this script as root. You can type 'sudo -i' to become root."
+  then echo "X [Not Root!]"
   exit
 fi
 cd /home/
@@ -12,25 +12,42 @@ echo
 yum install wget
 wget https://www.rainloop.net/repository/webmail/rainloop-latest.zip
 echo 
-echo "This installer is for aaPanel, or BT-Panel."
+echo "* [This installer is for aaPanel (BT-PANEL)]"
 echo 
-read -p "Enter your domain name. (This must be in your panel before!) Example: yourdomain.tld " domainName
+read -p "* [Enter your domain name (Example: domain.tld)] " domainName
 echo 
-read -p "I will replace the existing webmail/mail folder in the domain. Please close the program if you do not want this to happen. If you are sure, press ENTER. If not, press Control + C." input
+read -p "* [Removing other webmails] Are you sure? Press Control + C to not." input
 cd /www/wwwroot/$domainName
 rm -rf webmail
 rm -rf mail
+echo 
+echo "✓ [Removed other webmail]"
 mkdir webmail
 cd /home/installers
 unzip -qq rainloop-latest.zip
 mv * /www/wwwroot/$domainName/webmail
 cd /www/wwwroot/$domainName/webmail
 rm -rf rainloop-latest.zip
+echo "* [Fixing Permissions]"
 chmod -R 0666 data
-chmod -R 777 rainloop
-chmod -R 0777 rainloop/v/
+cd data
+chmod -R 0777 *
+cd ..
+chmod -R 0644 rainloop
+cd rainloop
+chmod -R 777 *
+cd ..
+cd rainloop/v
+chmod -R 777 *
+cd ..
 chmod -R 0666 index.php
+echo 
+echo "✓ [Fixed Permissions]
+echo 
 cd /www/wwwroot/$domainName/webmail/data
+echo "* [Finishing up]"
+echo 
+echo "✓ [Finished!]"
 echo "Deny from all" >> .htaccess
 echo 
 echo Congratulations, RainLoop is installed on http://$domainName/?admin!

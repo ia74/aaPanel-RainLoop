@@ -11,12 +11,14 @@ echo "* [Installing dependencies..]"
 yum -q install nano
 yum -q update
 echo 
-echo "* [Thanks for using my aaPanel Rainloop installer!]"
+echo "✓ [Installed dependencies!]"
+echo 
+echo "* [The installation will now begin!]"
 echo 
 read -p "* [Enter your domain name (Example: domain.tld)] " domainName
 echo 
 while true; do
-    read -p "*! [This will remove domains "mail" and "webmail" if they exist. Press Y to delete, N to cancel." yn
+    read -p "*! [This will remove domains "mail" and "webmail" if they exist. Press Y to delete, N to cancel.] " yn
     case $yn in
         [Yy]* ) echo "* [Installing]"; break;;
         [Nn]* ) exit;;

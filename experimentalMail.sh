@@ -33,7 +33,7 @@ chmod -R 755 /www/wwwroot/$domainName/webmail
 chmod -R 777 data
 chmod -R 777 rainloop
 chmod -R 666 data/EMPTY
-chmod -R 644 data/INSTALLED
+chmod -R 644 data/VERSION
 chmod -R 777 rainloop/*
 chmod -R 666 index.php
 echo 
@@ -43,7 +43,6 @@ cd /www/wwwroot/$domainName/webmail/data
 echo "* [Finishing up]"
 echo 
 echo "✓ [Finished!]"
-echo "Deny from all" >> .htaccess
 echo 
 echo Congratulations, RainLoop is installed on $domainName!
 echo 

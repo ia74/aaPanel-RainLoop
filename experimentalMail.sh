@@ -16,7 +16,7 @@ echo "This installer is for aaPanel, or BT-Panel."
 echo 
 read -p "Enter your domain name. (This must be in your panel before!) Example: yourdomain.tld " domainName
 echo 
-read -p "I will replace the existing webmail/mail folder in the domain. Please close the program if you do not want this to happen. If you are sure, press ENTER. If not, press Control + C."
+read -p "I will replace the existing webmail/mail folder in the domain. Please close the program if you do not want this to happen. If you are sure, press ENTER. If not, press Control + C." input
 cd /www/wwwroot/$domainName
 rm -rf webmail
 rm -rf mail

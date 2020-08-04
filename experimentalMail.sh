@@ -37,7 +37,7 @@ chmod -R 644 data/VERSION
 chmod -R 777 rainloop/*
 chmod -R 666 index.php
 echo 
-echo "✓ [Fixed Permissions]
+echo "✓ [Fixed Permissions]"
 echo 
 cd /www/wwwroot/$domainName/webmail/data
 echo "* [Finishing up]"

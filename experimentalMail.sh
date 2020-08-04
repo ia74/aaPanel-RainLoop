@@ -44,10 +44,10 @@ echo "* [Finishing up]"
 echo 
 echo "✓ [Finished!]"
 echo 
-echo Congratulations, RainLoop is installed on $domainName!
+echo "Congratulations, RainLoop is installed on $domainName!"
 echo 
-echo Finish installing Rainloop at http://$domainName/webmail/?admin
-echo Username: admin
-echo Password: 12345
+echo "Finish installing Rainloop at http://$domainName/webmail/?admin"
+echo "Username: admin"
+echo "Password: 12345"
 echo 
-echo Once you login, change this password to not expose the admin panel to users.
+echo "Once you login, change this password to not expose the admin panel to users."

@@ -8,6 +8,8 @@ rm -rf installers
 mkdir installers
 cd installers
 echo "* [Installing dependencies..]"
+yum -q install nano
+yum -q update
 echo 
 echo "* [Thanks for using my aaPanel Rainloop installer!]"
 echo 

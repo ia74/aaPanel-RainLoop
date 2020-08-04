@@ -9,9 +9,6 @@ mkdir installers
 cd installers
 echo "* [Installing dependencies..]"
 echo 
-yum -q install wget
-wget -qq https://www.rainloop.net/repository/webmail/rainloop-latest.zip
-echo 
 echo "* [Thanks for using my aaPanel Rainloop installer!]"
 echo 
 read -p "* [Enter your domain name (Example: domain.tld)] " domainName
@@ -20,7 +17,7 @@ while true; do
     read -p "*! [This will remove domains "mail" and "webmail" if they exist. Press Y to delete, N to cancel." yn
     case $yn in
         [Yy]* ) echo "* [Installing]"; break;;
-        [Nn]* ) echo "* [Sorry! Installation could not be complete due to: USER_EXIT]"; exit;;
+        [Nn]* ) echo "* [Sorry! Installation could not be complete due to: USER_EXIT]"; break;; exit;;
         * ) echo "Please answer yes or no.";;
     esac
 done

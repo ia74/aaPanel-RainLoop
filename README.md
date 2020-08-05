@@ -1,10 +1,7 @@
-# rainloop-aapanel
-Simple script for aaPanel. (things may/may not work)
+# aaPanel-Installers
 
-Latest (experimentalMail.sh)
-```wget https://raw.githubusercontent.com/riiz0r/rainloop-aapanel/master/experimentalMail.sh && sh experimentalMail.sh```
+A collection of software installers for aaPanel. To install the main one, where you can select a script, type this command:
 
-Beta (getMail.sh)
-```wget https://raw.githubusercontent.com/riiz0r/rainloop-aapanel/master/getMail.sh && sh getMail.sh```
+```wget && sh .sh```
 
-This project is very early.
+**The command doesn't have anything since the main installer has not been coded yet.*

@@ -12,7 +12,6 @@ mkdir installers
 cd installers
 echo "* [Installing dependencies..]"
 yum -q install nano
-yum -q update
 wget -qq https://www.rainloop.net/repository/webmail/rainloop-latest.zip
 echo 
 echo "✓ [Installed dependencies!]"

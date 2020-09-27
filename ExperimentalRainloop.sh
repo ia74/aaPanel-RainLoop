@@ -29,7 +29,13 @@ while true; do
 done
 echo
 read -p "* [If you have a custom directory for websites set, please input!] " custDirWeb
-if [ -z ${custDirWeb+x} ]; then export custDirWeb=/www/wwwroot && echo "* [Defaulted to /www/wwwroot/]"; else echo "* [Set directory to $custDirWeb]"; fi
+if [ -z "$custDirWeb" ]
+then
+      export custDirWeb=/www/wwwroot
+      echo "* [Defaulted to $custDirWeb]"
+else
+      echo "* [Set Directory to $custDirWeb]"
+fi
 cd $custDirWeb/$domainName
 rm -rf webmail
 rm -rf mail

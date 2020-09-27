@@ -40,7 +40,7 @@ mkdir webmail
 cd /home/installers
 unzip -qq rainloop-latest.zip
 mv * $custDirWeb/$domainName/webmail
-cd /www/wwwroot/$domainName/webmail
+cd $custDirWeb/$domainName/webmail
 rm -rf rainloop-latest.zip
 echo "* [Fixing Permissions]"
 chmod -R 755 $custDirWeb/$domainName/webmail

@@ -39,11 +39,11 @@ echo
 mkdir webmail
 cd /home/installers
 unzip -qq rainloop-latest.zip
-mv * /www/wwwroot/$domainName/webmail
+mv * $custDirWeb/$domainName/webmail
 cd /www/wwwroot/$domainName/webmail
 rm -rf rainloop-latest.zip
 echo "* [Fixing Permissions]"
-chmod -R 755 /www/wwwroot/$domainName/webmail
+chmod -R 755 $custDirWeb/$domainName/webmail
 chmod -R 777 data
 chmod -R 777 rainloop
 chmod -R 666 data/EMPTY
@@ -53,7 +53,7 @@ chmod -R 666 index.php
 echo 
 echo "✓ [Fixed Permissions]"
 echo 
-cd /www/wwwroot/$domainName/webmail/data
+cd $custDirWeb/$domainName/webmail/data
 echo "Deny from all" >> .htaccess
 echo "* [Finishing up]"
 echo 

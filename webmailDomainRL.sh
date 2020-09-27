@@ -1,5 +1,4 @@
 #!/bin/sh
-echo
 read -p "* [Please re-input the domain name! (Recommended example: webmail.domain.tld)] " domainName
 while true; do
     read -p "*! [This will remove domains "mail" and "webmail" if they exist. Press Y to delete, N to cancel.] " yn
@@ -53,3 +52,4 @@ echo "Username: admin"
 echo "Password: 12345"
 echo 
 echo "Once you login, change this password to not expose the admin panel to users."
+`"'

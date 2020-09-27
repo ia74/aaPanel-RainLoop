@@ -17,7 +17,7 @@ echo "✓ [Installed dependencies!]"
 echo 
 echo "* [The installation will now begin!]"
 echo 
-read -p "* [Enter your domain name (Example: domain.tld)] " domainName
+read -p "* [Enter your domain name (Recommended Example: webmail.domain.tld)] " domainName
 echo 
 while true; do
     read -p "*! [This will remove domains "mail" and "webmail" if they exist. Press Y to delete, N to cancel.] " yn

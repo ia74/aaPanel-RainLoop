@@ -23,8 +23,9 @@ echo "!!! [You must have this domain already or installation will fail.]"
 if [[ $domainName == *"webmail."* ]]; then
   echo "!!! *[You have selected a domain containing webmail in it. We will now download the corresponding script for it.]"
   echo
-  echo "!!! *[You must run the script manually by copying and pasting this command: sh webmailDomainRL.sh"
-  wget https://raw.githubusercontent.com/riiz0r/aaPanel-RainLoop/master/webmailDomainRL.sh
+  echo "!!! *[We will now run the webmail script.]"
+  wget -qq https://raw.githubusercontent.com/riiz0r/aaPanel-RainLoop/master/webmailDomainRL.sh
+  /bin/sh webmailDomainRL.sh
   exit
 fi
 echo 

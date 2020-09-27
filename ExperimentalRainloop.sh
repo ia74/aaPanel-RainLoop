@@ -10,6 +10,7 @@ cd /home/
 rm -rf installers
 mkdir installers
 cd installers
+echo "* [Installing dependencies..]"
 wget -qq https://www.rainloop.net/repository/webmail/rainloop-latest.zip
 echo 
 echo "✓ [Installed dependencies!]"
@@ -58,9 +59,9 @@ echo "* [Finishing up]"
 echo 
 echo "✓ [Finished!]"
 echo 
-echo "Congratulations, RainLoop is installed on $domainName!"
+echo "Congratulations, RainLoop is accessible on http://$domainName/webmail !"
 echo 
-echo "Finish installing Rainloop at http://$domainName/webmail/?admin"
+echo "The admin section to configure RainLoop to send/recieve is at http://$domainName/webmail/?admin"
 echo "Username: admin"
 echo "Password: 12345"
 echo 

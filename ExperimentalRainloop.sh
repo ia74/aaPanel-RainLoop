@@ -36,7 +36,7 @@ rm -rf mail
 echo 
 echo "✓ [Removed other webmail]"
 echo 
-mkdir webmail
+mkdir $custDirWeb/$domainName/webmail
 cd /home/installers
 unzip -qq rainloop-latest.zip
 mv * $custDirWeb/$domainName/webmail

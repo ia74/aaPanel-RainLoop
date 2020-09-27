@@ -20,6 +20,12 @@ echo
 read -p "* [Enter your domain name (Recommended Example: webmail.domain.tld)] " domainName
 echo
 echo "!!! [You must have this domain already or installation will fail.]"
+if [[ $domainName == *"webmail."* ]]; then
+  echo "!!! *[You have selected a domain containing webmail in it. We will now download the corresponding script for it.]"
+  echo
+  echo "!!! *[You must run the script manually by copying and pasting this command: sh webmailDomainRL.sh"
+  echo
+fi
 echo 
 while true; do
     read -p "*! [This will remove domains "mail" and "webmail" if they exist. Press Y to delete, N to cancel.] " yn

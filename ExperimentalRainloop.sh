@@ -28,7 +28,7 @@ while true; do
     esac
 done
 echo
-read -p "* [If you have a custom directory for websites set, please input!] " custDirWeb
+read -p "* [If you have a custom directory for websites set, please input! If not, press enter.] " custDirWeb
 if [ -z "$custDirWeb" ]
 then
       export custDirWeb=/www/wwwroot

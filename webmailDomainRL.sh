@@ -52,4 +52,3 @@ echo "Username: admin"
 echo "Password: 12345"
 echo 
 echo "Once you login, change this password to not expose the admin panel to users."
-`"'

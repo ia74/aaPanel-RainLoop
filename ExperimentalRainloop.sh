@@ -30,7 +30,9 @@ while true; do
     esac
 done
 echo
-cd /www/wwwroot/$domainName
+read -p "* [If you have a custom directory for websites set, please input!] " custDirWeb
+if [ -z ${custDirWeb+x} ]; then custDirWeb=/www/wwwroot && echo "* [Defaulted to /www/wwwroot/]"; else echo "* [Set directory to $custDirWeb]"; fi
+cd $custDirWeb/$domainName
 rm -rf webmail
 rm -rf mail
 echo 

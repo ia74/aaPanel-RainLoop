@@ -1,4 +1,6 @@
 #!/bin/sh
+export RLVersion = latest
+export versionS = stable/v2
 if [ "$EUID" -ne 0 ]
   then echo "X [Not Root!]"
   exit

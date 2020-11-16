@@ -1,4 +1,4 @@
 # aaPanel-RainLoop
 
-```wget https://raw.githubusercontent.com/riiz0r/aaPanel-RainLoop/master/getRainLoop.sh && sh getRainLoop.sh```
+```curl https://raw.githubusercontent.com/riiz0r/aaPanel-RainLoop/master/install.sh | sh```
 

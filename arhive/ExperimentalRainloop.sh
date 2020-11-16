@@ -24,7 +24,7 @@ if [[ $domainName == *"webmail."* ]]; then
   echo "!!! *[You have selected a domain containing webmail in it. We will now download the corresponding script for it.]"
   echo
   echo "!!! *[We will now run the webmail script.]"
-  wget -qq https://raw.githubusercontent.com/riiz0r/aaPanel-RainLoop/master/webmailDomainRL.sh
+  wget -qq https://raw.githubusercontent.com/riiz0r/aaPanel-RainLoop/master/archive/webmailDomainRL.sh
   /bin/sh webmailDomainRL.sh
   exit
 fi

@@ -44,7 +44,7 @@ case $yn in
 echo
 rm -rf webmail mail rainloop
 mkdir webmail
-cd webmail
+cd $webFolder/$domainName/webmail
 echo "* [ Fixing permissions ]"
 echo
 chmod -R 755 $webFolder/$domainName/webmail

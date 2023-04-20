@@ -7,9 +7,9 @@ rm -rf experimentalMail.sh.*
 echo "*[If this doesnt work, make sure there aren't any duplicates of the file!]"
 echo 
 cd /home/
-rm -rf installers
-mkdir installers
-cd installers
+rm -rf installers-aaprl
+mkdir installers-aaprl
+cd installers-aaprl
 echo "* [Installing dependencies..]"
 wget -qq https://www.rainloop.net/repository/webmail/rainloop-latest.zip
 echo 
@@ -35,7 +35,7 @@ echo
 echo "✓ [Removed other webmail]"
 echo 
 mkdir webmail
-cd /home/installers
+cd /home/installers-aaprl
 unzip -qq rainloop-latest.zip
 mv * /www/wwwroot/$domainName/webmail
 cd /www/wwwroot/$domainName/webmail
@@ -54,6 +54,8 @@ echo
 cd /www/wwwroot/$domainName/webmail/data
 echo "Deny from all" >> .htaccess
 echo "* [Finishing up]"
+cd ~
+rm -rf /home/installers-aaprl
 echo 
 echo "✓ [Finished!]"
 echo 
